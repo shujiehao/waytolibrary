@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.wayto.map.view.CompassView
+            android:id="@+id/map_compass_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:src="@mipmap/compass_72"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/map_layer_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dip"
+            android:src="@mipmap/homeicon_image_toggle1" />
+
+
+        <LinearLayout
+            android:id="@+id/Map_ZoominZoomout_RightTop_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/map_layer_iv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/map_icon_bg"
+            android:orientation="vertical"
+            android:padding="1dip"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/map_zoominRightTop_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/zoomin_selector"
+                android:padding="10dip">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_track_explore_zoomin" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="7dip"
+                android:layout_marginRight="7dip"
+                android:background="#9398B4" />
+
+            <LinearLayout
+                android:id="@+id/map_zoomoutRightTop_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/zoomin_selector"
+                android:padding="10dip">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_track_explore_zoomout" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/map_outside_switch_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/switch_btn_selector"
+            android:drawableTop="@mipmap/home_btn_tuichu"
+            android:gravity="center"
+            android:paddingTop="5dip"
+            android:paddingBottom="3dip"
+            android:text="返回"
+            android:textColor="@android:color/white"
+            android:textSize="8sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/map_cop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        android:layout_above="@+id/map_btm_layout"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/map_loc_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dip"
+            android:src="@mipmap/custom_loc"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/map_loc_layout"
+            android:layout_width="31dip"
+            android:layout_height="31dip"
+            android:layout_above="@+id/map_loc_iv"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/pro_bg"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="定位中"
+                android:textColor="#808080"
+                android:textSize="7sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/Map_ZoominZoomout_LeftBottom_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/map_loc_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/map_icon_bg"
+            android:orientation="vertical"
+            android:padding="1dip"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/map_zoominLeft_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/zoomin_selector"
+                android:padding="10dip">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_track_explore_zoomin" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="7dip"
+                android:layout_marginRight="7dip"
+                android:background="#9398B4" />
+
+            <LinearLayout
+                android:id="@+id/map_zoomoutLeft_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/zoomin_selector"
+                android:padding="10dip">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_track_explore_zoomout" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Map_ZoominZoomout_RightBottom_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/map_icon_bg"
+            android:orientation="vertical"
+            android:padding="1dip"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/map_zoomin_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/zoomin_selector"
+                android:padding="10dip">
+
+                <ImageView
+                    android:id="@+id/map_zoomin_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_track_explore_zoomin" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="7dip"
+                android:layout_marginRight="7dip"
+                android:background="#9398B4" />
+
+            <LinearLayout
+                android:id="@+id/map_zoomout_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/zoomin_selector"
+                android:padding="10dip">
+
+                <ImageView
+                    android:id="@+id/map_zoomout_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_track_explore_zoomout" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.wayto.map.view.CompassView
+        android:id="@+id/loc_rotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scaleType="center"
+        android:src="@mipmap/ic_navigation_black"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/map_btm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="invisible"></LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/MapView_Location_Flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/ic_loc_nor"
+        android:visibility="gone"
+        app:backgroundTint="#FFFFFF"
+        app:fabSize="mini" />
+</RelativeLayout>
