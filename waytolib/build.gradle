@@ -44,7 +44,6 @@ dependencies {
 
     api deps.support.design
     api deps.greendao.runtime
-    /*高德定位*/
     api deps.amap.location
 
 }
