@@ -44,6 +44,6 @@ dependencies {
 
     api deps.support.design
     api deps.greendao.runtime
-    api deps.amap.location
+    implementation deps.amap.location
 
 }
